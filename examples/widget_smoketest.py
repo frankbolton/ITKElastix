@@ -16,6 +16,40 @@ from typing import Any
 import numpy as np
 
 
+def _version(name: str) -> str:
+    """Return an installed package version or '(not installed)'.
+
+    Args:
+      name: Distribution name.
+
+    Returns:
+      Installed version string.
+    """
+    try:
+        from importlib.metadata import version
+
+        return version(name)
+    except Exception:
+        return "(not installed)"
+
+
+def _print_versions() -> None:
+    """Print key package versions for debugging."""
+    versions = {
+        "itkwidgets": _version("itkwidgets"),
+        "ipywidgets": _version("ipywidgets"),
+        "ipydatawidgets": _version("ipydatawidgets"),
+        "traitlets": _version("traitlets"),
+        "traittypes": _version("traittypes"),
+        "notebook": _version("notebook"),
+        "jupyter_server": _version("jupyter-server"),
+        "numpy": _version("numpy"),
+    }
+    print("Widget stack versions:")
+    for key in sorted(versions):
+        print(f"  - {key}=={versions[key]}")
+
+
 def _write_png(output_path: Path) -> None:
     """Write a small PNG image for sanity checking.
 
@@ -58,7 +92,22 @@ def _write_itkwidgets_mimebundle(output_path: Path) -> None:
     label: np.ndarray = np.zeros_like(image)
     label[12:20, 12:20] = 1
 
-    viewer = view(image, label_image=label)
+    try:
+        viewer = view(image, label_image=label)
+    except Exception as exc:  # noqa: BLE001
+        message = str(exc)
+        if "label_image_weights shape expected" in message:
+            raise RuntimeError(
+                "itkwidgets failed to construct a Viewer with a label image.\n\n"
+                "This usually means your environment is still using an incompatible "
+                "widget stack (or an old uv.lock / .venv).\n\n"
+                "Recommended fix (run in the examples directory):\n"
+                "  1) Delete `.venv/` and `uv.lock`\n"
+                "  2) `uv add -r requirements.txt`\n"
+                "  3) `uv sync --reinstall`\n\n"
+                "Then re-run this smoke test.\n"
+            ) from exc
+        raise
 
     # In ipywidgets 7, `_get_embed_state()` is the stable public-ish API we can
     # use to prove the widget has a valid model + state for front-end rendering.
@@ -92,6 +141,7 @@ def main(*, output_dir: Path) -> int:
     Returns:
       Process exit code (0 for success).
     """
+    _print_versions()
     output_dir.mkdir(parents=True, exist_ok=True)
     _write_png(output_dir / "widget_smoketest_overlay.png")
     _write_itkwidgets_mimebundle(output_dir / "widget_smoketest_mimebundle.json")
