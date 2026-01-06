@@ -1,6 +1,8 @@
 itk-elastix>=0.23.0
 itkwidgets>=0.32.6
 jupyterlab>=3.6.0,<4
+notebook>=6.4.0,<6.5.0
+jupyter-server<2
 imageio
 ipywidgets>=7.8.5,<8
 widgetsnbextension>=3.6.0,<4
