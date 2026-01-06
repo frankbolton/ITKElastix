@@ -1,0 +1,259 @@
+{
+  "buffers": [
+    {
+      "data": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEAAAAAAAABAQAAAAAAAAAAA",
+      "encoding": "base64",
+      "path": [
+        "_largest_roi",
+        "buffer"
+      ]
+    },
+    {
+      "data": "AQEB",
+      "encoding": "base64",
+      "path": [
+        "_scale_factors",
+        "buffer"
+      ]
+    },
+    {
+      "data": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "encoding": "base64",
+      "path": [
+        "camera",
+        "buffer"
+      ]
+    },
+    {
+      "data": "",
+      "encoding": "base64",
+      "path": [
+        "geometry_colors",
+        "buffer"
+      ]
+    },
+    {
+      "data": "",
+      "encoding": "base64",
+      "path": [
+        "geometry_opacities",
+        "buffer"
+      ]
+    },
+    {
+      "data": "",
+      "encoding": "base64",
+      "path": [
+        "point_set_colors",
+        "buffer"
+      ]
+    },
+    {
+      "data": "",
+      "encoding": "base64",
+      "path": [
+        "point_set_opacities",
+        "buffer"
+      ]
+    },
+    {
+      "data": "",
+      "encoding": "base64",
+      "path": [
+        "point_set_sizes",
+        "buffer"
+      ]
+    },
+    {
+      "data": "KLUv/WAAA6UCACQCAAD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/ACEQAASqdNexTrrrWCfddayT7jrWSXcd66S7jnXSXcc66a5jnXTXsU6661gn3R1QsQ==",
+      "encoding": "base64",
+      "path": [
+        "rendered_image",
+        "compressedData"
+      ]
+    },
+    {
+      "data": "KLUv/WAAA3UBAJAAAAEAAQABAAEAAQABAAEAAQAREACIStyrzJV6LqviXmWu1HNZFfcqc8WhigU=",
+      "encoding": "base64",
+      "path": [
+        "rendered_label_image",
+        "compressedData"
+      ]
+    },
+    {
+      "data": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEAAAAAAAABAQAAAAAAAAAAA",
+      "encoding": "base64",
+      "path": [
+        "roi",
+        "buffer"
+      ]
+    }
+  ],
+  "model_module": "itkwidgets",
+  "model_module_version": "^0.32.6",
+  "model_name": "ViewerModel",
+  "state": {
+    "_custom_cmap": null,
+    "_dom_classes": [],
+    "_downsampling": false,
+    "_largest_roi": {
+      "dtype": "float64",
+      "shape": [
+        2,
+        3
+      ]
+    },
+    "_model_module": "itkwidgets",
+    "_model_module_version": "^0.32.6",
+    "_model_name": "ViewerModel",
+    "_rendering_image": true,
+    "_reset_crop_requested": false,
+    "_scale_factors": {
+      "dtype": "uint8",
+      "shape": [
+        3
+      ]
+    },
+    "_view_count": null,
+    "_view_module": "itkwidgets",
+    "_view_module_version": "^0.32.6",
+    "_view_name": "ViewerView",
+    "annotations": true,
+    "axes": false,
+    "background": [],
+    "blend_mode": "composite",
+    "camera": {
+      "dtype": "float32",
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "channels": null,
+    "clicked_slice_point": null,
+    "cmap": null,
+    "geometries": [],
+    "geometry_colors": {
+      "dtype": "float32",
+      "shape": [
+        0,
+        3
+      ]
+    },
+    "geometry_opacities": {
+      "dtype": "float32",
+      "shape": [
+        0
+      ]
+    },
+    "gradient_opacity": 0.22,
+    "interpolation": false,
+    "label_image_blend": 0.5,
+    "label_image_names": null,
+    "label_image_weights": null,
+    "layout": "IPY_MODEL_5a3d7e50251d4f2dac822646c84dea37",
+    "lut": "glasbey",
+    "mode": "v",
+    "opacity_gaussians": null,
+    "point_set_colors": {
+      "dtype": "float32",
+      "shape": [
+        0,
+        3
+      ]
+    },
+    "point_set_opacities": {
+      "dtype": "float32",
+      "shape": [
+        0
+      ]
+    },
+    "point_set_representations": [],
+    "point_set_sizes": {
+      "dtype": "uint8",
+      "shape": [
+        0
+      ]
+    },
+    "point_sets": [],
+    "rendered_image": {
+      "direction": {
+        "columns": 2,
+        "data": [
+          1.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rows": 2
+      },
+      "imageType": {
+        "componentType": "uint8_t",
+        "components": 1,
+        "dimension": 2,
+        "pixelType": 1
+      },
+      "origin": [
+        0.0,
+        0.0
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "spacing": [
+        1.0,
+        1.0
+      ]
+    },
+    "rendered_label_image": {
+      "direction": {
+        "columns": 2,
+        "data": [
+          1.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rows": 2
+      },
+      "imageType": {
+        "componentType": "uint8_t",
+        "components": 1,
+        "dimension": 2,
+        "pixelType": 1
+      },
+      "origin": [
+        0.0,
+        0.0
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "spacing": [
+        1.0,
+        1.0
+      ]
+    },
+    "roi": {
+      "dtype": "float64",
+      "shape": [
+        2,
+        3
+      ]
+    },
+    "rotate": false,
+    "sample_distance": 0.25,
+    "select_roi": false,
+    "shadow": true,
+    "slicing_planes": false,
+    "ui_collapsed": false,
+    "units": "",
+    "vmax": null,
+    "vmin": null,
+    "x_slice": null,
+    "y_slice": null,
+    "z_slice": null
+  }
+}

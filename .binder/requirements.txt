@@ -1,8 +1,12 @@
 itk-elastix>=0.23.0
-itkwidgets>=0.32.0
-jupyterlab>=2.2.0
+itkwidgets>=0.32.6
+jupyterlab>=3.6.0,<4
+notebook>=6.4.0,<6.5.0
+jupyter-server<2
 imageio
-ipywidgets>=7.5.1
+ipywidgets>=7.8.5,<8
+widgetsnbextension>=3.6.0,<4
+jupyterlab_widgets>=1.1.0,<2
 ipympl>=0.5.7
 numpy
 torch>=2.0
